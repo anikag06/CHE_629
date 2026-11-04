@@ -7,7 +7,7 @@ Reproduction of **Sample et al. (2019)**, *"Human 5′ UTR design and variant ef
 from a massively parallel translation assay"* (Nature Biotechnology 37:803–809, GEO GSE114002),
 plus one extension: a CNN + attention hybrid.
 
-**Report:** [`paper/main.pdf`](paper/main.pdf) (ICML format, 9 pages) · **Source:** `paper/main.tex`
+**Report:** [`paper/main.pdf`](paper/main.pdf) (ICML format, 6 pages) · **Source:** `paper/main.tex`
 
 ---
 

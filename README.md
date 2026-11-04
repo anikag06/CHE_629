@@ -9,36 +9,6 @@ plus one extension: a CNN + attention hybrid.
 
 **Report:** [`paper/main.pdf`](paper/main.pdf) (ICML format, 6 pages) · **Source:** `paper/main.tex`
 
----
-
-## Quick start — live demo (~90 seconds, CPU, no training required)
-
-```bash
-pip install -r requirements.txt
-python3 demo.py                 # all sections
-```
-
-| Section | Command | What it shows |
-|---|---|---|
-| 1. Reproduction | `python3 demo.py reproduce` | Paper CNN (r² 0.923) and our hybrid (r² 0.941) on the 20k held-out test set |
-| 2. Benchmarks | `python3 demo.py benchmarks` | Unified table: r², Spearman, RMSE, accuracy, precision, recall, F1 |
-| 3. Live training | `python3 demo.py train` | Trains a model from scratch on 5,000 sequences in ~40 s |
-
-Sections 1–2 need only `data/test.csv` and the shipped weights in `weights/`.
-Section 3 additionally needs `data/train.csv` (regenerate with `python3 00_prep.py <GEO file>`).
-
----
-
-## Where each graded component lives
-
-| Component | Marks | Where |
-|---|---|---|
-| **Paper understanding** | 15 | `paper/main.tex` §2 (biological problem, dataset, DL formulation) |
-| **Reproduction** (synthetic + paper dataset, train/val/test, preprocessing) | 25 | `synth.py`, `10_make_synthetic.py`, `00_prep.py`–`06_figures.py`, `novelty/data.py`; report §3–4 |
-| **Benchmark comparison** (3 benchmarks, accuracy/precision/recall/F1/confusion) | 20 | `bench.py`, `runner.py`, `novelty/unified_metrics.py`; `results/unified/summary.md`; report §5 |
-| **Novelty / extension** | 40 | `novelty/partA.py` (U baseline), `novelty/partB*.py`, `novelty/partD.py arch`; `NOVELTY_RESULTS.md`; report §6 |
-
----
 
 ## Headline results
 
@@ -143,7 +113,3 @@ NOVELTY_RESULTS.md  full extension write-up with all tables
 - Environment: Python 3, PyTorch 2.x (CPU), ViennaRNA 2.x, LightGBM 4.x, modisco-lite.
   All experiments ran on 2 CPU cores without a GPU; this imposed a 15-epoch cap at full data,
   which is stated in the report wherever it limits a conclusion.
-
-## License
-
-Code released under the MIT License (`LICENSE`). Data belongs to Sample et al. and GEO.

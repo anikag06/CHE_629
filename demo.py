@@ -27,8 +27,8 @@ import numpy as np, pandas as pd, torch
 torch.set_num_threads(2)
 from optimus import OptimusCNN, one_hot
 from bench import BiLSTM, evaluate, tertile_edges, kmer_features, feature_matrix
-from models import build
-from train import fit, predict, Scaler
+from novelty.models import build
+from novelty.train import fit, predict, Scaler
 
 W = "weights"
 BAR = "=" * 78

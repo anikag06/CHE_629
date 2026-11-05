@@ -109,7 +109,6 @@ NOVELTY_RESULTS.md  full extension write-up with all tables
   calibration. All model selection uses a validation split carved from the training pool
   (10% at full data, 20% in small-data regimes).
 - Scripts require path to raw data folders, use:
- ## Layout
  ```
 [Environment]::SetEnvironmentVariable(
     "GSE114002_RAW_DIR",

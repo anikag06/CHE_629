@@ -108,6 +108,16 @@ NOVELTY_RESULTS.md  full extension write-up with all tables
 - The **20,000-UTR test set is never used** for hyperparameter choice, early stopping or
   calibration. All model selection uses a validation split carved from the training pool
   (10% at full data, 20% in small-data regimes).
+- Scripts require path to raw data folders, use:
+ ## Layout
+ ```
+[Environment]::SetEnvironmentVariable(
+    "GSE114002_RAW_DIR",
+    "<PATH_TO_GSE114002_RAW_FOLDER>",
+    "User"
+)
+ ```
+
 - Each result JSON records the config, seed, parameter count, best epoch and the full
   validation curve.
 - Environment: Python 3, PyTorch 2.x (CPU), ViennaRNA 2.x, LightGBM 4.x, modisco-lite.

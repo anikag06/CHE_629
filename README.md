@@ -55,7 +55,7 @@ unmodified library at all. `novelty/data.py` does this.
 ```bash
 # reproduction + benchmarks
 python3 00_prep.py <path to GSM3130435_egfp_unmod_1.csv.gz>
-python3 01_check_author_weights.py      # authors' Keras weights -> our model, r2 0.934
+# python3 01_check_author_weights.py      checks authors' Keras weights -> our model, r2 0.934
 python3 10_make_synthetic.py            # synthetic dataset with known rules
 python3 runner.py synth cnn 1337        # {synth|real} x {cnn|bilstm|lgbm|kmer} x seed
 python3 runner.py real  cnn 1337
